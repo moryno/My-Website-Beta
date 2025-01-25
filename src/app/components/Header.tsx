@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ToggleTheme from "./ToggleTheme"
 
 
 export const Header = () => {
@@ -35,6 +36,7 @@ export const Header = () => {
                       className="font-medium hover:underline underline-offset-8 decoration-pink-500">
                        Contact
                     </Link>
+                    <ToggleTheme />
             </article>
         </section>
   )
