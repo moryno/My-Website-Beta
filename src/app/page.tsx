@@ -3,13 +3,9 @@ import Link from "next/link";
 import { FaBluesky, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa6";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { Header } from "./components/Header";
-
 
 export default function Home() {
   return (
-    <>
-     <Header />
    <section className="flex">
     <article className="w-full md:w-4/6 flex flex-col gap-5">
       <Image src="/logo.png" alt="this is the logo of the website" width={40} height={40} />
@@ -54,7 +50,5 @@ export default function Home() {
     </article>
     <article className="w-full md:w-2/6"></article>
    </section>
-
-   </>
   );
 }
