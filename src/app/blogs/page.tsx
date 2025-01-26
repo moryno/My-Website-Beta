@@ -1,6 +1,6 @@
 import Blog from '@/components/Blog';
 import Footer from '@/components/Footer';
-import { Header } from '@/components/Header'
+import  Header  from '@/components/Header'
 
 export const metadata = {
     title: "Blog Posts",
@@ -14,7 +14,7 @@ const page = () => {
         <Header />
         <main>
             <div>
-                <h1 className="text-3xl font-bold">Blog Posts</h1>
+                <h1 className="text-[80px] font-bold">Blog Posts</h1>
                 <h2 className='text-xl tracking-tighter leading-10'>Write-ups about my projects and research</h2>
             </div>
             <section className='flex gap-5 flex-wrap mt-5'>

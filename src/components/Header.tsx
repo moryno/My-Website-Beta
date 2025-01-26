@@ -2,7 +2,7 @@ import Link from "next/link"
 import ToggleTheme from "./ToggleTheme"
 
 
-export const Header = () => {
+const Header = () => {
   return (
      <section className="flex items-center justify-between py-5">
             <Link href={"/"} 
@@ -41,3 +41,5 @@ export const Header = () => {
         </section>
   )
 }
+
+export default Header
