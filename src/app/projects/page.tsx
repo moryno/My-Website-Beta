@@ -7,7 +7,6 @@ export const metadata = {
     description: "Browse the projects I designed and developed for experiment, research and opinion.",
   };
   
-
 const page = () => {
   return (
     <>
