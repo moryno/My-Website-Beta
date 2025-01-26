@@ -6,7 +6,7 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 const Project = () => {
   return (
     <Link href={"/"} className="bg-[#F8F9FA] w-full md:w-[32%] shadow-xl rounded-lg overflow-hidden">
-        <Image src="/placeholder.png" alt="" width={200} height={250} className='w-full h-[30vh]' />
+        <Image src="/placeholder.png" alt="this is product cover" width={200} height={250} className='w-full h-[30vh] object-cover' />
         <div className='px-3 pt-2 pb-5'>
         <h1 className="text-2xl font-bold tracking-tighter">Interview Svelte&apos;s Rich harris</h1>
         <div className='w-full flex flex-wrap gap-2 my-2'>
