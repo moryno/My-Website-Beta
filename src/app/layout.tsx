@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
-        <main className="overflow-x-hidden antialiased w-full md:w-[90%] lg:w-[80%] mx-auto">
+        <main className="antialiased w-full md:w-[90%] lg:w-[80%] mx-auto">
         {children}
         </main>
       </body>

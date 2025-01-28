@@ -1,5 +1,7 @@
+import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Journey from "@/components/Journey";
 import Image from "next/image";
 
 export const metadata = {
@@ -55,9 +57,11 @@ const page = () => {
     </section>
     <section className="mt-5">
     <h1 className="text-2xl font-bold">My Experience</h1>
+    <Experience />
     </section>
     <section className="mt-5">
     <h1 className="text-2xl font-bold">My Journey</h1>
+    <Journey />
     </section>
     </main>
     <Footer />
