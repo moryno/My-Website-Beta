@@ -1,6 +1,6 @@
+import Socials from "@/components/Socials";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBluesky, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa6";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 
@@ -36,12 +36,7 @@ export default function Home() {
                         <span>Get Resume</span>
                         <MdDownload size={16} />
                     </Link></div>
-      <div className="flex items-center gap-5">
-      <FaGithub className="text-lg" />
-      <FaLinkedin className="text-lg" />
-      <FaBluesky className="text-lg" />
-      <FaMedium className="text-lg" />
-      </div>
+  <Socials />
       <div className="flex items-center gap-5">
         <span className="underline underline-offset-8 hover:bg-red-100 hover:decoration-4 cursor-pointer decoration-pink-500 font-normal">About</span>
         <span className="underline underline-offset-8 hover:bg-red-100 hover:decoration-4 cursor-pointer decoration-pink-500 font-normal">Blogs</span>
