@@ -2,7 +2,8 @@ import Image from "next/image"
 
 const Journey = () => {
   return (
-    <section className="flex flex-col gap-5">
+    <section className="mt-20">
+         <section className="flex flex-col gap-5 ">
       <article className="flex relative h-96">
         <div className="absolute left-0 -top-3 p-5 bg-white shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
           <Image src="/award.jpg" alt="First runners up award" className="w-full rounded-md object-cover h-72" width={300} height={300} />
@@ -33,6 +34,31 @@ const Journey = () => {
         </div>
       </article>
     </section>
+    <section className="py-20 flex flex-col gap-5">
+    <p className="text-lg leading-8">
+As previously mentioned, my first career, passion, and love was, and
+          forever will be, music. I started playing viola when I was eight years
+          old and simply stuck with it as I had natural talent; what kid doesn&apos;t
+          like doing something because they are good at it? However, it did not
+          take more than two or three years to realize I wanted to do something
+          with music for the rest of my life.
+</p>
+<p className="text-lg leading-8">
+At age fifteen, I began performing professionally at local musical
+          theatres and weddings around Long Island. I would continue to do so
+          until around thirty years old when my scope increased from only Long
+          Island to the tri-state area (New York, New Jersey, and Connecticut).
+</p>
+<p className="text-lg leading-8">
+When I dropped out of college in 2013, I went on to manage a couple of
+          local music stores while continuing to perform professionally and
+          teach private music lessons. However, there came a time when I
+          realized that I was not making enough money and needed to change
+          courses. That is when I transitioned into Procurement.
+</p>
+    </section>
+    </section>
+ 
   )
 }
 

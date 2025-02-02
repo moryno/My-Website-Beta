@@ -1,13 +1,15 @@
 import Experience from "@/components/Experience";
 import Journey from "@/components/Journey";
 import Image from "next/image";
+import Link from "next/link";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const page = () => {
   return (
 
     <>
-    <h1 className="text-[80px] font-bold">About</h1>
-    <section className="flex flex-col lg:flex-row gap-16">
+    <h1 className="text-[80px] font-bold tracking-tight">About</h1>
+    <section className="flex mt-5 flex-col lg:flex-row gap-16">
         <div className="w-full lg:w-5/12 h-max">
         <div className="h-[500px] relative">
                 <Image
@@ -17,13 +19,14 @@ const page = () => {
                   sizes="50vw"
                   className="object-cover rounded-md"
                 />
-                </div></div>
-                <div className="w-full lg:w-7/12 flex flex-col gap-6">
-                <h1 className="text-xl">Who am I?</h1>
-                <h1 className="text-2xl font-semibold">
-              I&apos;m Maurice Nganga, a Frontend Developer
+                </div>
+              </div>
+                <div className="w-full lg:w-7/12 flex flex-col gap-5">
+                <h1 className="text-xl text-textCol">Who am I?</h1>
+                <h1 className="text-2xl  tracking-wide">
+                I&apos;m <b>Maurice Nganga</b>, a <b>Frontend Developer</b>.
             </h1>
-            <p className="text-slate-600 py-5">
+            <p className="text-slate-600">
               I am a software developer based in Nairobi Kenya,and I create
               amazing solutions for Web applications. I help convert a vision
               and an idea into meaningful and useful software products. Having
@@ -35,23 +38,19 @@ const page = () => {
             <p className="text-slate-600">
             Proficient in JavaScript, TypeScript, React, NextJS, Astro, Tailwind CSS, and more, I bring transferable skills in project management, problem-solving, and much more.
             </p>
+                <Link className="font-medium text-lg flex items-center transition-colors duration-200 text-textCol group" href={"/"} download>
+                  <span>View my resume</span> <FaArrowRightLong className="ml-1 transition-transform duration-200 group-hover:translate-x-2" />
+                </Link>
 
-            <div className="flex gap-5 mt-3">
-              <button className="font-semibold py-2 px-3 w-fit cursor-pointer rounded-3xl">
-                <a href={"/"} download>
-                  Download resume
-                </a>
-              </button>
-            </div>
             </div>
 
     </section>
     <section className="mt-5">
-    <h1 className="text-2xl font-bold">My Experience</h1>
+    <h1 className="text-4xl font-bold tracking-tighter">My Experience</h1>
     <Experience />
     </section>
     <section className="mt-5">
-    <h1 className="text-2xl font-bold">My Journey</h1>
+    <h1 className="text-4xl font-bold tracking-tighter">My Journey</h1>
     <Journey />
     </section>
     </>
