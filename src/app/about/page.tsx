@@ -1,20 +1,11 @@
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Journey from "@/components/Journey";
 import Image from "next/image";
 
-export const metadata = {
-    title: "Maurice Nganga",
-    description: "This is an about page for Maurice Nganga. His journey so far from retail Manager and Cashier to Software Developer.",
-  };
-  
-
 const page = () => {
   return (
+
     <>
-    <Header />
-    <main>
     <h1 className="text-[80px] font-bold">About</h1>
     <section className="flex flex-col lg:flex-row gap-16">
         <div className="w-full lg:w-5/12 h-max">
@@ -63,8 +54,6 @@ const page = () => {
     <h1 className="text-2xl font-bold">My Journey</h1>
     <Journey />
     </section>
-    </main>
-    <Footer />
     </>
   )
 }

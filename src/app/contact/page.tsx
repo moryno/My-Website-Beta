@@ -1,15 +1,10 @@
-import Footer from "@/components/Footer"
-import Header from "@/components/Header"
 import Socials from "@/components/Socials"
 import { TbMailForward } from "react-icons/tb"
 
-
 const page = () => {
   return (
-    <>
-    <Header />
-    <main>
-    <h1 className="text-[80px] font-bold">Let&apos;s Work Together</h1>
+    <section className="mt-10 mb-32">
+    <h1 className="text-[80px] mb-10 font-bold">Let&apos;s Work Together</h1>
      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-10">
         <div className="flex flex-col gap-5">
             <h1 className="text-6xl font-bold tracking-tighter">Let&apos;s Talk</h1>
@@ -66,7 +61,7 @@ const page = () => {
       
                             <button className="px-3 w-max text-xs md:px-8 py-3 md:py-4 bg-black rounded-full border-none text-center md:text-sm
                                 font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200
-                                ease-out md:font-semibold flex items-center gap-1 hover:gap-3">
+                                ease-out md:font-semibold flex self-end items-center gap-1 hover:gap-3">
                                 <span>Contact Me</span>
                                 <TbMailForward size={16} />
                             </button>
@@ -80,9 +75,7 @@ const page = () => {
                         </form>
         </div>
      </section>
-    </main>
-    <Footer />
-    </>
+    </section>
   )
 }
 

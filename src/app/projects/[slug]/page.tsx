@@ -1,13 +1,10 @@
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 import ProductImages from '@/components/ProductImages'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-    <Header />
-    <main className="flex flex-col lg:flex-row gap-16">
+    <section className="flex flex-col lg:flex-row gap-16">
        <section className="w-full lg:w-1/2 h-max">
        <ProductImages />
        </section>
@@ -35,8 +32,7 @@ const page = () => {
       </div>
        </div>
        </section>
-    </main>
-    <Footer />
+    </section>
     </>
   )
 }
