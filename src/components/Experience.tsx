@@ -18,7 +18,7 @@ const Experience = () => {
                 // initial={{ opacity: 0, x: -100 }}
                 // transition={{ duration: 1 }}
             >
-                <p className="mb-2 text-sm text-stone-400">
+                <p className="mb-2 text-sm">
                     {experience.year}
                 </p>
             </div>
@@ -29,11 +29,11 @@ const Experience = () => {
                className="w-full lg:w-3/4">
                 <h3 className="mb-2 font-semibold">
                     {experience.role} -{" "}
-                    <span className="text-sm text-stone-500">
+                    <span className="text-sm">
                         {experience.company}
                     </span>
                 </h3>
-                <p className="mb-4 text-stone-400">
+                <p className="mb-4">
                     {experience.description}
                 </p>
                 {experience.technologies.map((tech: string, index: number) => (

@@ -8,10 +8,10 @@ const page = () => {
   return (
 
     <>
-    <h1 className="text-[80px] font-bold tracking-tight">About</h1>
+    <h1 className="text-[clamp(2.59rem,2.22rem+1.87vw,3.55rem)] font-extrabold tracking-tight">About</h1>
     <section className="flex mt-5 flex-col lg:flex-row gap-16">
         <div className="w-full lg:w-5/12 h-max">
-        <div className="h-[500px] relative">
+        <div className="h-[530px] relative">
                 <Image
                   src="/me-bg.png"
                   alt="This is maurice profile"
@@ -26,7 +26,7 @@ const page = () => {
                 <h1 className="text-2xl  tracking-wide">
                 I&apos;m <b>Maurice Nganga</b>, a <b>Frontend Developer</b>.
             </h1>
-            <p className="text-slate-600">
+            <p >
               I am a software developer based in Nairobi Kenya,and I create
               amazing solutions for Web applications. I help convert a vision
               and an idea into meaningful and useful software products. Having
@@ -35,7 +35,7 @@ const page = () => {
               at my portfolio work and lets see if we can work together on your
               next project.
             </p>
-            <p className="text-slate-600">
+            <p >
             Proficient in JavaScript, TypeScript, React, NextJS, Astro, Tailwind CSS, and more, I bring transferable skills in project management, problem-solving, and much more.
             </p>
                 <Link className="font-medium text-lg flex items-center transition-colors duration-200 text-textCol group" href={"/"} download>

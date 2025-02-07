@@ -27,8 +27,8 @@ const page = () => {
           <span className='w-fit px-2 py-1 bg-red-100 rounded-sm text-xs font-medium'>MongoDB</span>
           </div>
           <div className="flex items-center gap-5">
-        <span className="underline underline-offset-8 hover:bg-red-100 hover:decoration-4 cursor-pointer decoration-pink-500 font-normal">GitHub</span>
-        <span className="underline underline-offset-8 hover:bg-red-100 hover:decoration-4 cursor-pointer decoration-pink-500 font-normal">Website</span>
+        <span className="underline underline-offset-8 hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal">GitHub</span>
+        <span className="underline underline-offset-8 hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal">Website</span>
       </div>
        </div>
        </section>

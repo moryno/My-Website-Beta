@@ -4,7 +4,7 @@ import { TbMailForward } from "react-icons/tb"
 const page = () => {
   return (
     <section className="mt-10 mb-32">
-    <h1 className="text-[80px] mb-10 font-bold">Let&apos;s Work Together</h1>
+    <h1 className="text-[clamp(2.59rem,2.22rem+1.87vw,3.55rem)] font-extrabold mb-10">Let&apos;s Work Together</h1>
      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-10">
         <div className="flex flex-col gap-5">
             <h1 className="text-6xl font-bold tracking-tighter">Let&apos;s Talk</h1>

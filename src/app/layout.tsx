@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeContextProvider } from "@/context/ThemeContext";
+import ThemeProvider from "@/providers/ThemeProvider";
 const inter = Inter({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
@@ -19,9 +21,13 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
-        <main className="w-full md:w-[90%] lg:w-[80%] mx-auto">
-        {children}
-        </main>
+        <ThemeContextProvider>
+          <ThemeProvider>
+            <main className="w-full">
+            {children}
+            </main>
+          </ThemeProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
