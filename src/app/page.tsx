@@ -18,8 +18,8 @@ export default function Home() {
       <p className="flex items-center gap-2 text-sm">Previuosly:<span className="underline underline-offset-8  hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">Anza Cloud</span><span className="underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">Arity Technologies</span><span className="underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">IntSoft (K) Ltd</span></p>
       <div className="flex mt-5 items-center gap-3"> 
         <Link href={"/contact"} 
-                      target="_blank"
                       rel="noopener nonreferrer"
+                      aria-label="View Contact Page"
                       className="bg-gradient-to-r from-stone-300 to-stone-600 hover:from-stone-600 hover:to-stone-300
                        rounded-full p-[1px] text-sm text-white mb-10">
                         <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-black rounded-full border-none text-center md:text-sm
@@ -33,6 +33,7 @@ export default function Home() {
                       role="button"
                       target="_blank"
                       rel="noopener nonreferrer"
+                      aria-label="Download My Resume"
                       download
                       className="flex items-center gap-1 hover:gap-3 bg-white border border-black rounded-full md:px-8 p-3 md:py-4 uppercase md:text-sm text-xs font-medium tracking-wider no-underline transition-all duration-200 ease-out
                        text-center text-black mb-10">
