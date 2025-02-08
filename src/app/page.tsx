@@ -4,9 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
+import PreLoader from "./animations/PreLoader/PreLoader";
 
 export default function Home() {
   return (
+    <>
+    <PreLoader />
   <section className="md:w-[90%] lg:w-[80%] mx-auto">
     <section className="py-5 flex justify-end"><ToggleTheme /></section>
      <section className="flex mt-20">
@@ -50,5 +53,6 @@ export default function Home() {
     <article className="w-full md:w-2/6"></article>
    </section>
   </section>
+  </>
   );
 }

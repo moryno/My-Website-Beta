@@ -11,7 +11,7 @@ const Project = () => {
 
   return (
     <Link href={"/"} className={`${theme === "dark" ? "bg-cardDark" : "bg-cardLight"} w-full md:w-[48%] xl:w-[32%] shadow-xl rounded-lg overflow-hidden group`}>
-        <Image src="/placeholder.png" alt="this is product cover" width={200} height={250} className='w-full h-[30vh] object-cover' />
+        <Image src="/placeholder.png" priority alt="this is product cover" width={200} height={250} className='w-full h-[30vh] object-cover' />
         <div className='px-3 pt-2 pb-5'>
         <h1 className="text-3xl font-bold tracking-tight">Interviewin Svelte&apos;s</h1>
         <div className='w-full flex flex-wrap gap-2 my-2'>
