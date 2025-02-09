@@ -29,12 +29,12 @@ const Project = () => {
            text="Interviewin Svelte&apos;s"
            wordSpace='mr-[0.25em]'
            charSpace='-mr-[0.01em]'
-           className="text-xl font-bold uppercase leading-none tracking-tight"
+           className="text-2xl font-semibold uppercase tracking-tight"
            />
         <div className='w-full flex flex-wrap gap-2 my-2'>
           {
            technologies.map((tech, i) => (
-            <span key={i} className='w-fit px-2 py-1 bg-red-100 rounded-sm'>
+            <span key={i} className={`w-fit px-2 py-1 bg-greenLight text-dark rounded-sm`}>
                <AnimatedTitle 
                 text={tech}
                 wordSpace='mr-[0.25em]'

@@ -1,12 +1,18 @@
+"use client"
+
 import AnimatedBody from "@/app/animations/AnimatedBody";
+import { ThemeContext } from "@/context/ThemeContext";
 import Image from "next/image";
+import { useContext } from "react";
 
 const Journey = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <section className="mt-20">
       <section className="flex flex-col gap-5 ">
         <article className="flex relative h-96">
-          <div className="absolute left-0 -top-3 p-5 bg-white shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute left-0 -top-3 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/award.jpg"
               alt="First runners up award"
@@ -18,7 +24,7 @@ const Journey = () => {
               1st Runners Up
             </p>
           </div>
-          <div className="absolute left-1/3 top-4 p-5 bg-white shadow-lg rounded-md w-1/3 transform rotate-1 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute left-1/3 top-4 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform rotate-1 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/phot.jpg"
               alt="Maurice at a meet up"
@@ -30,7 +36,7 @@ const Journey = () => {
               At a Code Jam
             </p>
           </div>
-          <div className="absolute right-0 -top-6 p-5 bg-white shadow-lg rounded-md w-1/3 transform rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute right-0 -top-6 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/community.jpg"
               alt="Maurice first hackathon"
@@ -44,7 +50,7 @@ const Journey = () => {
           </div>
         </article>
         <article className="flex relative h-96">
-          <div className="absolute left-0 -top-6 p-5 bg-white shadow-lg rounded-md w-1/3 transform rotate-12 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute left-0 -top-6 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform rotate-12 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/me-mentor.jpg"
               alt="Maurice at Moringa mentorship training"
@@ -56,7 +62,7 @@ const Journey = () => {
               Mentorship Cohort 2 Launch!
             </p>
           </div>
-          <div className="absolute left-1/3 top-6 p-5 bg-white shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute left-1/3 top-6 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/hackathon.jpg"
               alt="hackathon"
@@ -68,7 +74,7 @@ const Journey = () => {
               Inua Sauti DAO Presentation
             </p>
           </div>
-          <div className="absolute right-0 -top-8 p-5 bg-white shadow-lg rounded-md w-1/3 transform -rotate-1 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute right-0 -top-8 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform -rotate-1 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/taji.jpg"
               alt="The taji group hackathon"
@@ -100,7 +106,7 @@ const Journey = () => {
          className={"text-lg leading-8"}
           />
           <article className="flex relative h-96 my-20">
-          <div className="absolute left-0 -top-3 p-5 bg-white shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute left-0 -top-3 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/moringa.jpg"
               alt="Project presentation at Moringa"
@@ -112,7 +118,7 @@ const Journey = () => {
               Project Presentation
             </p>
           </div>
-          <div className="absolute left-1/3 top-4 p-5 bg-white shadow-lg rounded-md w-1/3 transform rotate-1 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute left-1/3 top-4 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform rotate-1 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/meet.jpg"
               alt="Maurice at a meet up"
@@ -124,7 +130,7 @@ const Journey = () => {
               At a Meetup
             </p>
           </div>
-          <div className="absolute right-0 -top-6 p-5 bg-white shadow-lg rounded-md w-1/3 transform rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10">
+          <div className={`absolute right-0 -top-6 p-5 bg-white ${theme === "dark" && "text-greenLight"} shadow-lg rounded-md w-1/3 transform rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-10`}>
             <Image
               src="/present.jpg"
               alt="Maurice first hackathon"

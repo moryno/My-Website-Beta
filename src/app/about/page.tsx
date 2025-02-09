@@ -56,12 +56,12 @@ const page = () => {
           />
           <AnimatedBody
             text={
-              "Proficient in JavaScript, TypeScript, React, Next.js, Redux, Tailwind CSS, Node.js and more. In addition to my technical expertise, I bring strong problem-solving skills, a keen eye for user experience, collaboration, and project management capabilities, ensuring seamless execution from development to deployment."
+              "Proficient in JavaScript, TypeScript, React, Next.js, Redux, Tailwind CSS, Node.js and more. I bring strong problem-solving skills, a keen eye for user experience, collaboration, and project management capabilities."
             }
           />
           <AnimatedBody
             text={
-              "Before transitioning into web development, I worked as a manager and cashier at a retail shop selling movies and electronics. This experience honed my customer experience, communication, and adaptability skills, which I now integrate into my development work to build intuitive and user-centric applications."
+              "Before web development, I worked as a manager and cashier at a retail shop selling movies and electronics. This experience honed my customer experience, communication, and adaptability skills, which I now integrate into my development work to build intuitive and user-centric applications."
             }
           />
           <Link

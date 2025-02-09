@@ -24,7 +24,7 @@ const Blog = () => {
                    text="Interviewing Svelte&apos;s Rich harris"
                    wordSpace='mr-[0.25em]'
                    charSpace='-mr-[0.01em]'
-                   className="text-xl font-bold uppercase leading-none tracking-tight"
+                   className="text-2xl font-semibold uppercase tracking-tight"
                    />
                       <AnimatedBody
                                    text={"Sun FEB 04 2024"}
@@ -37,7 +37,7 @@ const Blog = () => {
                                    text={"It’s been almost a year since ChatGPT changed everything. Since then, the web has been flooded with content written by large language models (LLMs). Social media is drowning in this boring and generic LLM contentSocial media is drowning in this boring and generic LLM content Social media is drowning in this boring and generic LLM content Social media is drowning in this boring and generic LLM content."}
                                    wordSpace='mr-[0.25em]'
                                    charSpace='-mr-[0.01em]'
-                                  className="text-lg font-normal leading-8 tracking-wider text-ellipsis line-clamp-4"
+                                  className="text-lg font-normal leading-10 tracking-wider text-ellipsis line-clamp-4"
                                    />
     <motion.span variants={riseWithFade} className="font-medium flex items-center justify-end transition-colors duration-200 group-hover:text-greenDark mt-8"><span>Read More</span> <FaArrowRightLong className="ml-1 transition-transform duration-200 group-hover:translate-x-2" /></motion.span>        </div>
       </motion.div>
