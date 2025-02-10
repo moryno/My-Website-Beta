@@ -3,19 +3,22 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
+import { ReactNode } from "react";
 const inter = Inter({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Maurice Nganga Porfolio Website",
   description: "Next JS Development",
+  category: "technology"
 };
 
+type RootLayoutProps = {
+  children : ReactNode
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: RootLayoutProps) {
   return (
     <html lang="en">
       <body
@@ -23,7 +26,7 @@ export default function RootLayout({
       >
         <ThemeContextProvider>
           <ThemeProvider>
-            <main className="w-full">
+            <main className="w-full antialiased">
             {children}
             </main>
           </ThemeProvider>

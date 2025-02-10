@@ -21,6 +21,8 @@ export default {
         cardLight: "#F1F3F5",
         cardDark: "#12263A",
         dark: "#0F1F2F",
+        greenLight: "#5FA305",
+        greenDark: "#73C606",
       },
       textColor: {
         light: "#2E4760",
