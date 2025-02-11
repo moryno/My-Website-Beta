@@ -1,38 +1,77 @@
-import ProductImages from '@/components/ProductImages'
-import React from 'react'
+"use client";
 
-const page = () => {
+import BackButton from '@/components/BackButton'
+import ProductImages from '@/components/ProductImages'
+import { projectsData } from '@/utils/data/projects-data';
+import React from 'react'
+import { ProjectDataType } from '../page';
+import AnimatedWords from '@/app/animations/AnimatedWords';
+import AnimatedTitle from '@/app/animations/AnimatedTitle';
+import Content from '@/app/blogs/[slug]/Content';
+import Link from 'next/link';
+
+const page = ({ params }: { params : { slug : string}}) => {
+  const decodedSlug = decodeURIComponent(params.slug);
+      const project = projectsData.find((project: ProjectDataType) => project.id === decodedSlug);
+
+      if (!project) {
+        return <div>Project not found</div>;
+      }
+
   return (
     <>
     <section className="flex flex-col lg:flex-row gap-16">
-       <section className="w-full lg:w-1/2 h-max">
-       <ProductImages />
-       </section>
-       <section className="w-full lg:w-1/2 flex flex-col gap-6">
-       <h1 className='text-4xl font-medium'>Hacking cars in JavaScript</h1>
-       <p className="text-gray-500">
-       Welcome to the world of Redux! If you’re just starting out with state management or seeking clarity on Redux’s role in React applications, fear not — you’re in the perfect spot. I’m no Redux guru myself; I’m simply someone who’s recently grasped the basic structure of Redux and is eager to share the experience with you. In this blog post, we’ll walk through building a straightforward counter app using React, Redux, and NextJS 14. By the time we wrap up, you’ll learn the basic fundamentals of Redux, understand its integration within NextJS projects for scalable solutions, and also get to grips with setting up a project directory that meets industry standards.
-       Welcome to the world of Redux! If you’re just starting out with state management or seeking clarity on Redux’s role in React applications, fear not — you’re in the perfect spot. I’m no Redux guru myself; I’m simply someone who’s recently grasped the basic structure of Redux and is eager to share the experience with you. In this blog post, we’ll walk through building a straightforward counter app using React, Redux, and NextJS 14. By the time we wrap up, you’ll learn the basic fundamentals of Redux, understand its integration within NextJS projects for scalable solutions, and also get to grips with setting up a project directory that meets industry standards.
-       Welcome to the world of Redux! If you’re just starting out with state management or seeking clarity on Redux’s role in React applications, fear not — you’re in the perfect spot. I’m no Redux guru myself; I’m simply someone who’s recently grasped the basic structure of Redux and is eager to share the experience with you. In this blog post, we’ll walk through building a straightforward counter app using React, Redux, and NextJS 14. By the time we wrap up, you’ll learn the basic fundamentals of Redux, understand its integration within NextJS projects for scalable solutions, and also get to grips with setting up a project directory that meets industry standards.
-       
-       </p>
-       <hr />
-       <div>
+       <section className="w-full lg:w-1/2 h-max sticky top-5">
+       <ProductImages images={ project.images } />
+       <hr className="mt-10" />
+       <div className="mt-2">
         <p>Technologies:</p>
         <div className='w-full flex flex-wrap gap-2 my-2'>
-          <span className='w-fit px-2 py-1 bg-red-100 rounded-sm text-xs font-medium'>TypeScript</span>
-          <span className='w-fit px-2 py-1 bg-red-100 rounded-sm text-xs font-medium'>React</span>
-          <span className='w-fit px-2 py-1 bg-red-100 rounded-sm text-xs font-medium'>Tailwind</span>
-          <span className='w-fit px-2 py-1 bg-red-100 rounded-sm text-xs font-medium'>Nodejs</span>
-          <span className='w-fit px-2 py-1 bg-red-100 rounded-sm text-xs font-medium'>MongoDB</span>
+           {
+                    project.technologies.map((tech, i) => (
+                      <span key={i} className={`w-fit px-2 py-[6px] bg-greenLight text-dark rounded-sm`}>
+                         <AnimatedTitle
+                          text={tech}
+                          wordSpace='mr-[0.25em]'
+                          charSpace='-mr-[0.01em]'
+                          className="text-xs font-medium"
+                       />
+                      </span>
+                     ))
+                    }
           </div>
-          <div className="flex items-center gap-5">
-        <span className="underline underline-offset-8 hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal">GitHub</span>
-        <span className="underline underline-offset-8 hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal">Website</span>
+          <div className="flex items-center gap-5 mt-5">
+        <Link  href={project.githubLink}
+              role="link"
+              target="_blank"
+              rel="noopener nonreferrer"
+              aria-label="Project Repo Link"
+             className="underline underline-offset-8 hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal">GitHub</Link>
+        {project.demoLink &&
+        <Link 
+        href={project.demoLink}
+              role="link"
+              target="_blank"
+              rel="noopener nonreferrer"
+              aria-label="Project Demo Link"
+        className="underline underline-offset-8 hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal">Demo Link</Link>
+        }
       </div>
        </div>
        </section>
+       <section className="w-full lg:w-1/2 flex flex-col gap-6">
+       <AnimatedWords
+            title={project.title}
+            style={"text-4xl font-medium"}
+          />
+       <Content content={project.content} />
+      
+       </section>
     </section>
+       <div className='flex justify-end mt-5'>
+       <BackButton />
+       </div>
+      
     </>
   )
 }

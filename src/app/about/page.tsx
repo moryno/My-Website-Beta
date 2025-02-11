@@ -65,8 +65,12 @@ const page = () => {
             }
           />
           <Link
-            className="font-medium text-lg flex items-center transition-colors duration-200 text-greenDark group"
-            href={"/"}
+            className="font-medium text-lg flex items-center transition-colors duration-200 text-greenDark group hover:underline underline-offset-8"
+            href={"./Maurice_Nganga_Resume.pdf"}
+            role="button"
+            target="_blank"
+            rel="noopener nonreferrer"
+            aria-label="Download My Resume"
             download
           >
             <span>View my resume</span>{" "}

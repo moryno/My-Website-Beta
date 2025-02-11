@@ -114,7 +114,7 @@ const Hero = () => {
               </motion.button>
             </Link>
             <Link
-              href={""}
+              href={"./Maurice_Nganga_Resume.pdf"}
               role="button"
               target="_blank"
               rel="noopener nonreferrer"

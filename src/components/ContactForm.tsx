@@ -9,12 +9,13 @@ const ContactForm = () => {
   const { theme } = useContext(ThemeContext);
   const formRef = useRef<HTMLFormElement>(null);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setIsLoading(true)
+    setIsLoading(true);
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -25,13 +26,15 @@ const ContactForm = () => {
       .then(
         () => {
           setSuccess(true);
-          setIsLoading(false)
+          setIsLoading(false);
           setTimeout(() => setSuccess(false), 5000);
-          formRef.current?.reset()
+          formRef.current?.reset();
         },
         (error) => {
           console.log(error.text);
-          setIsLoading(false)
+          setIsLoading(false);
+          setError(true);
+          setTimeout(() => setError(false), 5000);
         }
       );
   };
@@ -73,7 +76,6 @@ const ContactForm = () => {
       <textarea
         className="bg-transparent w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300
                                 px-3 py-2"
-        // cols={30}
         name="message"
         rows={3}
         placeholder="Message..."
@@ -84,10 +86,9 @@ const ContactForm = () => {
       <button
         className={`px-3 w-max text-xs md:px-8 py-3 md:py-4 bg-dark rounded-full ${
           theme === "dark" ? "border border-[#f8f9fa]" : "border-none"
-        }-none text-center md:text-sm
-                                font-medium uppercase tracking-wider text-dark no-underline transition-all duration-200
-                                ease-out md:font-semibold flex self-end items-center gap-1 hover:gap-3`}
-                                disabled={isLoading}
+        }-none text-center md:text-sm font-medium uppercase tracking-wider text-dark no-underline transition-all duration-200
+          ease-out md:font-semibold flex self-end items-center gap-1 hover:gap-3`}
+        disabled={isLoading}
       >
         <span>Contact Me</span>
         <TbMailForward size={16} />
@@ -96,6 +97,11 @@ const ContactForm = () => {
       {success && (
         <span className=" text-green-500 p-3 ring-1 rounded-md ring-green-500 w-fit">
           Mail sent. Thank you.
+        </span>
+      )}
+      {error && (
+        <span className=" text-red-500 p-3 ring-1 rounded-md ring-red-500 w-fit">
+          Failed to send email.
         </span>
       )}
     </form>

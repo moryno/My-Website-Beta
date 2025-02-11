@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import PageTitle from "@/components/PageTitle";
 import Socials from "@/components/Socials";
@@ -39,8 +38,8 @@ const page = () => {
         </div>
         <motion.div  
             whileInView={{ opacity: 1, x: 0 }}
-               initial={{ opacity: 0, x: 100 }}
-               transition={{ duration: 1 }}>
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1 }}>
           <ContactForm />
         </motion.div>
       </section>
