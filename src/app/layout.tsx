@@ -26,7 +26,7 @@ export default function RootLayout({
       >
         <ThemeContextProvider>
           <ThemeProvider>
-            <main className="w-full scroll-smooth scrollbar-thin scrollbar-track-[#0e1016] scrollbar-thumb-[#212531] antialiased">
+            <main className="w-full antialiased">
             {children}
             </main>
           </ThemeProvider>
