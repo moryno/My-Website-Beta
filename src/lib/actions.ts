@@ -1,6 +1,6 @@
 export const getBlogs = async () => {
   const res = await fetch(
-    `https://v1.nocodeapi.com/${process.env.NEXT_PUBLIC_MEDIUM_USERNAME}/medium/PHtfQEsSFTiKhnUV`
+    `https://v1.nocodeapi.com/moryno/medium/PHtfQEsSFTiKhnUV`
   );
 
   if (!res.ok) {
