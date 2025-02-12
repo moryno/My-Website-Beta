@@ -15,7 +15,7 @@ const defaultContext: contextType = {
 export const ThemeContext = createContext<contextType>(defaultContext);
 
 const getTheme = () => {
-    if(typeof window !== undefined){
+    if(typeof window !== "undefined"){
     const value = localStorage.getItem("theme") 
     return value || "dark"
     }
@@ -24,17 +24,21 @@ const getTheme = () => {
 }
 
 export const ThemeContextProvider = ({ children } : { children: ReactNode}) => {
-    const [theme, setTheme] = useState(() => getTheme());
+    const [theme, setTheme] = useState("dark");
 
+    useEffect(() => {
+        setTheme(getTheme());
+      }, []);
     const toggle = () => {
         setTheme(theme === "light" ? "dark" : "light")
     }
 
     useEffect(() => {
-        localStorage.setItem("theme", theme);
-
-        document.documentElement.classList.remove("light", "dark");
-        document.documentElement.classList.add(theme);
+        if (typeof window !== "undefined") {
+            localStorage.setItem("theme", theme);
+            document.documentElement.classList.remove("light", "dark");
+            document.documentElement.classList.add(theme);
+          }
 
     }, [theme])
     
