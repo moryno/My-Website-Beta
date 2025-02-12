@@ -4,9 +4,12 @@ import Content from "./Content";
 import PageTitle from '@/components/PageTitle';
 import BackButton from '@/components/BackButton';
 
-const page = async ({ params } : { params : { slug: string}}) => {
+export type ParamsType = Promise< { slug: string}>;
+
+const page = async ({ params } : { params : ParamsType}) => {
     const blogs = await getBlogs();
-    const decodedSlug = decodeURIComponent(params.slug);
+    const { slug } = await params;
+    const decodedSlug = decodeURIComponent(slug);
     const blog = blogs.find((blog: BlogType) => blog.title === decodedSlug);
 
   if (!blog) {
