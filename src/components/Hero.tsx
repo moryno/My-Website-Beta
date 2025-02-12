@@ -23,7 +23,7 @@ const Hero = () => {
       animate="animate"
       className="w-full md:w-[90%] lg:w-[80%] mx-auto"
     >
-      <section className="p-2 sm:py-5 sm:px-5 md:px-0 flex justify-end">
+      <section className="p-2 sm:p-5 md:px-0 flex justify-end">
         <ToggleTheme />
       </section>
       <section className="flex mt-10 sm:mt-20">

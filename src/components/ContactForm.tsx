@@ -84,7 +84,7 @@ const ContactForm = () => {
       ></textarea>
 
       <button
-        className={`px-3 w-max text-xs md:px-8 py-3 md:py-4 bg-dark rounded-full ${
+        className={`w-max text-xs md:px-6 md:py-3 xl:px-8 xl:py-4 p-3 bg-dark rounded-full ${
           theme === "dark" ? "border border-[#f8f9fa]" : "border-none"
         }-none text-center md:text-sm font-medium uppercase tracking-wider text-dark no-underline transition-all duration-200
           ease-out md:font-semibold flex self-end items-center gap-1 hover:gap-3`}

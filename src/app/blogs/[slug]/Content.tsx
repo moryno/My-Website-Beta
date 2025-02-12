@@ -9,7 +9,7 @@ const Content = ({ content } : { content: string}) => {
 
   return (
     <div    
-       className={`prose lg:prose-lg sm:px-0 md:px-0 min-w-full lg:px-0 leading-relaxed ${
+       className={`prose sm:prose-base lg:prose-lg sm:px-0 md:px-0 min-w-full lg:px-0 leading-relaxed ${
         theme === "dark"
           ? "prose-dark bg-dark text-dark"
           : "bg-light text-light"

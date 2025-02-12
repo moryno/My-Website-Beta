@@ -18,21 +18,21 @@ const page = () => {
         <div className="flex flex-col gap-5">
           <AnimatedWords
             title={"Let's Talk"}
-            style={"text-5xl font-bold tracking-tighter"}
+            style={"text-3xl md:text-5xl font-bold tracking-tighter"}
           />
           <AnimatedBody
             text={`I'd love to hear from you no matter what. I am open to
             employment opportunities, collaborative projects, and more. I am
             excited to meet new people in the space and grow as a developer.`}
-            className={"text-balance leading-relaxed xl:leading-10 text-lg"}
+            className={"text-balance leading-8 xl:leading-10 text-base xl:text-lg"}
           />
           <AnimatedWords
             title={"Connect with me"}
-            style={"text-5xl font-bold tracking-tighter"}
+            style={"text-3xl md:text-5xl font-bold tracking-tighter"}
           />
           <AnimatedBody
             text={`Feel fee to connect with me on any the platforms below!`}
-            className={"leading-relaxed xl:leading-10 text-lg"}
+            className={"leading-8 xl:leading-10 text-base xl:text-lg"}
           />
           <Socials />
         </div>

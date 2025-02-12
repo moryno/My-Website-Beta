@@ -11,9 +11,7 @@ type AnimatedBodyProps = {
 
 const AnimatedBody = ({
     text,
-    className,
-    wordSpace,
-    charSpace
+    className
 } : AnimatedBodyProps) => {
     const ctrs = useAnimation();
 
@@ -30,11 +28,7 @@ const AnimatedBody = ({
              }
          }, [ctrs, inView]);
 
-         const wordAnimation = {
-            hidden: {},
-            visible: {}
-        }
-
+   
         const bodyAnimation = {
             hidden: {
                 opacity: 0,

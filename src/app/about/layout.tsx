@@ -9,7 +9,7 @@ export const metadata = {
   
 
 export default function AboutLayout({ children }: { children: ReactNode }){
-    return <main className="w-full md:w-[95%] xl:w-[90%] 2xl:w-[75%] 3xl:w-[70%] mx-auto">
+    return <main className="w-[95%] xl:w-[75%] 2xl:w-[75%] 3xl:w-[70%] mx-auto">
         <Header />
         { children }
         <Footer />

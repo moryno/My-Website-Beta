@@ -8,7 +8,7 @@ export const metadata = {
   };
   
 export default function ProjectLayout({ children }: { children: ReactNode }){
-    return <main className="w-full md:w-[95%] xl:w-[90%] 2xl:w-[75%] 3xl:w-[70%] mx-auto">
+    return <main className="w-[90%] xl:w-[90%] 2xl:w-[75%] 3xl:w-[70%] mx-auto">
         <Header />
         { children }
         <Footer />

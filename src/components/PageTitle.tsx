@@ -27,7 +27,7 @@ const PageTitle = ({
                    className="text-[clamp(2.59rem,2.22rem+1.87vw,3.55rem)] font-extrabold tracking-tight"
                    />
             { subTitle && 
-            <AnimatedBody text={subTitle} className="text-xl tracking-tighter leading-10" />}
+            <AnimatedBody text={subTitle} className="text-lg sm:text-xl tracking-tighter leading-8 sm:leading-10" />}
         </motion.div>
   )
 }

@@ -21,20 +21,20 @@ const page = () => {
         animate="animate"
       >
       <section
-        className="flex mt-5 flex-col lg:flex-row gap-16"
+        className="flex mt-5 flex-col md:flex-row gap-8 md:gap-4 lg:gap-16"
       >
-        <div className="w-full lg:w-5/12">
-          <motion.div className="h-[540px] relative" variants={imageAnimation}>
+        <div className="w-full md:w-5/12">
+          <motion.div className="h-80 sm:h-[540px] relative" variants={imageAnimation}>
             <Image
               src="/me-bg.png"
               alt="This is maurice profile"
               priority
               fill
-              className="object-cover w-[150px] md:w-[200px] lg:w-[245px] rounded-full"
+              className="object-cover aspect-square w-full h-full md:rounded-full"
             />
           </motion.div>
         </div>
-        <div className="w-full lg:w-7/12 flex flex-col gap-5">
+        <div className="w-full md:w-7/12 flex flex-col gap-5">
           <AnimatedWords title="Who am I?" style={"text-xl text-greenDark"} />
           <AnimatedTitle
             text={`I'm Maurice Nganga, a Frontend Developer.`}
@@ -44,22 +44,21 @@ const page = () => {
           />
 
           <AnimatedBody
-            text={`I am a software developer based in Nairobi, Kenya, specializing in creating amazing solutions for web applications. I help transform visions and ideas into meaningful and useful software products that make a real impact.`}
+            className="text-sm leading-8"
+            text={`I help transform visions and ideas into meaningful and useful software products that make a real impact.`}
           />
           <AnimatedBody
+            className="text-sm leading-8"
             text={`Currently, I'm helping to build and shape meaningful human-centric innovations at Smart Applications International, simplifying access to healthcare and empowering people to make informed decisions about their wellbeing.`}
           />
           <AnimatedBody
-            text={
-              "Beyond my professional work, I build side projects to explore new technologies and share my learnings with others. I also write blogs on Medium, focusing on creative coding and fun ways to build for the web."
-            }
-          />
-          <AnimatedBody
+            className="text-sm leading-8"
             text={
               "Proficient in JavaScript, TypeScript, React, Next.js, Redux, Tailwind CSS, Node.js and more. I bring strong problem-solving skills, a keen eye for user experience, collaboration, and project management capabilities."
             }
           />
           <AnimatedBody
+            className="text-sm leading-8"
             text={
               "Before web development, I worked as a manager and cashier at a retail shop selling movies and electronics. This experience honed my customer experience, communication, and adaptability skills, which I now integrate into my development work to build intuitive and user-centric applications."
             }
@@ -78,17 +77,17 @@ const page = () => {
           </Link>
         </div>
       </section>
-      <section className="mt-10">
+      <section className="mt-10 px-2 sm:p-5 md:p-0">
         <AnimatedWords
           title={"My Experience"}
-          style={"text-4xl font-bold tracking-tighter"}
+          style={"text-2xl md:text-4xl font-bold tracking-tighter"}
         />
         <Experience />
       </section>
-      <section className="mt-10">
+      <section className="mt-10 px-2 sm:p-5 md:p-0">
         <AnimatedWords
           title={"My Journey"}
-          style={"text-4xl font-bold tracking-tighter"}
+          style={"text-2xl md:text-4xl font-bold tracking-tighter"}
         />
         <Journey />
       </section>

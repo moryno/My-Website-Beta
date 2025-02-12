@@ -26,10 +26,8 @@ const page = async () => {
   return (
     <>
             <PageTitle title="Blog Posts" subTitle="Write-ups about my projects and research" />
-
-            <section className='flex gap-5 flex-wrap mt-10'>
+            <section className='flex gap-5 flex-wrap mt-5 sm:mt-10'>
               { blogs.map((blog : BlogType) => <Blog key={blog.title} blog={blog} />)}
-      
             </section>
 
     </>

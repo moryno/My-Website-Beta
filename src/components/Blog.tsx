@@ -21,20 +21,20 @@ const Blog = ({ blog }: { blog: BlogType }) => {
       href={`/blogs/${blog.title}`}
       className={`${
         theme === "dark" ? "bg-cardDark" : "bg-cardLight"
-      } w-full md:w-[48%] shadow-2xl rounded-lg p-5 group`}
+      } w-full md:w-[48%] shadow-md sm:shadow-lg 2xl:shadow-2xl roundend-md sm:rounded-lg md:rounded-lg p-5 group`}
     >
       <motion.div ref={ref} initial="initial" animate="animate">
         <AnimatedTitle
           text={blog.title}
           wordSpace="mr-[0.25em]"
           charSpace="-mr-[0.01em]"
-          className="text-2xl font-semibold uppercase tracking-tight"
+          className="text-base sm:text-xl font-semibold uppercase tracking-tight"
         />
         <AnimatedBody
           text={moment(blog.created).format("ddd MMM DD YYYY")}
           wordSpace="mr-[0.25em]"
           charSpace="-mr-[0.01em]"
-          className={`mt-3 mb-5 text-sm font-bold ${
+          className={`mt-3 mb-5 text-xs lg:text-sm font-bold ${
             theme === "dark" ? "text-greenDark" : "text-greenLight"
           }`}
         />
@@ -43,12 +43,12 @@ const Blog = ({ blog }: { blog: BlogType }) => {
             text={extractParagraphs(blog.content).slice(0, 200) + "..."}
             wordSpace="mr-[0.25em]"
             charSpace="-mr-[0.01em]"
-            className="text-lg font-normal leading-10 tracking-wider text-ellipsis line-clamp-4"
+            className="text-sm md:text-base font-normal leading-8 2xl:leading-10 tracking-wide lg:tracking-wider text-ellipsis line-clamp-4"
           />
         </div>
         <motion.span
           variants={riseWithFade}
-          className="font-medium flex items-center justify-end transition-colors duration-200 group-hover:text-greenDark mt-8"
+          className="font-medium text-sm flex items-center justify-end transition-colors duration-200 group-hover:text-greenDark mt-8"
         >
           <span>Read More</span>{" "}
           <FaArrowRightLong className="ml-1 transition-transform duration-200 group-hover:translate-x-2" />

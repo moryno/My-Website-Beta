@@ -15,7 +15,7 @@ const page = async ({ params } : { params : { slug: string}}) => {
 
   return (
     <main className="min-h-screen">
-        <div className="mx-auto px-6 py-12">
+        <div className="mx-auto md:px-6 md:py-12">
           <PageTitle title={blog.title} />
           <p className="text-sm text-greenDark my-6">
             { moment(blog.published).format("MMM Do, YYYY") }

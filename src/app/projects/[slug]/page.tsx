@@ -20,8 +20,8 @@ const page = ({ params }: { params : { slug : string}}) => {
 
   return (
     <>
-    <section className="flex flex-col lg:flex-row gap-16">
-       <section className="w-full lg:w-1/2 h-max sticky top-5">
+    <section className="flex flex-col lg:flex-row gap-5 lg:gap-16">
+       <section className="w-full lg:w-1/2 h-max lg:sticky lg:top-5">
        <ProductImages images={ project.images } />
        <hr className="mt-10" />
        <div className="mt-2">
