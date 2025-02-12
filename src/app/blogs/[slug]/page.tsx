@@ -1,8 +1,9 @@
 import moment from 'moment';
-import { BlogType, getBlogs } from '../page'
+import { BlogType } from '../page'
 import Content from "./Content";
 import PageTitle from '@/components/PageTitle';
 import BackButton from '@/components/BackButton';
+import { getBlogs } from '@/lib/actions';
 
 export type ParamsType = Promise< { slug: string}>;
 
