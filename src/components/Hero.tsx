@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Socials from "@/components/Socials";
 import ToggleTheme from "@/components/ToggleTheme";
-// import Image from "next/image";
 import Link from "next/link";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
@@ -22,13 +21,13 @@ const Hero = () => {
     <motion.section
       initial="initial"
       animate="animate"
-      className="md:w-[90%] lg:w-[80%] mx-auto"
+      className="w-full md:w-[90%] lg:w-[80%] mx-auto"
     >
-      <section className="py-5 flex justify-end">
+      <section className="p-2 sm:py-5 sm:px-5 md:px-0 flex justify-end">
         <ToggleTheme />
       </section>
-      <section className="flex mt-20">
-        <motion.article className="w-full md:w-4/6 flex flex-col gap-5">
+      <section className="flex mt-10 sm:mt-20">
+        <motion.article className="w-full md:w-5/6 xl:w-4/6 p-2 sm:px-5 md:p-0 flex flex-col gap-5">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -46,57 +45,86 @@ const Hero = () => {
 
             <motion.h1
               variants={leftChildVariants}
-              className="text-6xl font-bold"
+              className="text-3xl sm:text-4xl md:text-6xl font-bold"
             >
               Hey 👋
             </motion.h1>
             <motion.p
               variants={leftChildVariants}
-              className="text-xl leading-relaxed xl:leading-10 tracking-tighter"
+              className="text-base sm:text-lg md:text-xl leading-relaxed xl:leading-10 md:tracking-tighter"
             >
               I&apos;m <b>Maurice Nganga</b>. A <b>Frontend Developer</b>.
               I&apos;m passionate about the web and it&apos;s infinte
               possibilities. I love contributing to{" "}
-              <span className=" underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-[#73C606]">
+              <Link
+               href={"https://github.com/moryno"}
+               role="link"
+               target="_blank"
+               rel="noopener nonreferrer"
+               aria-label="Maurice Nganga GitHub"
+               className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-[#73C606]">
                 open source
-              </span>
+              </Link>
               , sharing my developer journey on{" "}
-              <span className=" underline underline-offset-8 decoration-1  hover:decoration-2 cursor-pointer decoration-[#73C606]">
+              <Link 
+               href={"https://medium.com/@mauricenganga41"}
+               role="link"
+               target="_blank"
+               rel="noopener nonreferrer"
+               aria-label="Medium website"
+              className="underline underline-offset-8 decoration-1  hover:decoration-2 cursor-pointer decoration-[#73C606]">
                 medium
-              </span>{" "}
+              </Link>{" "}
               and unwinding with some{" "}
-              <span className=" underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606]">
+              <span className="underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606]">
                 video games
               </span>
             </motion.p>
             <motion.p
               variants={leftChildVariants}
-              className="text-xl leading-relaxed xl:leading-10 tracking-tighter"
+              className="text-base sm:text-lg md:text-xl leading-relaxed xl:leading-10 tracking-tighter"
             >
               Currently, I&apos;m helping to build and shape meaningful human-centric innovations at{" "}
-              <span className=" underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-[#73C606]">
+              <Link
+                   href={"https://smartapplicationsgroup.com/"}
+                   role="link"
+                   target="_blank"
+                   rel="noopener nonreferrer"
+                   aria-label="Smart Applications company website"
+               className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-[#73C606]">
                 Smart Applications International,
-              </span> 
+              </Link> 
               {" "}
               simplifying access to healthcare and empowering people to make informed decisions about their wellbeing.
             </motion.p>
-            <motion.p
+            <motion.div
               variants={leftChildVariants}
-              className="flex items-center gap-2 text-sm"
+              className="flex md:items-center gap-2 text-sm text-wrap"
             >
               Previuosly:
-              <span className="underline underline-offset-8  hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">
+              <Link
+                   href={"https://anza.cloud/"}
+                    role="link"
+                    target="_blank"
+                    rel="noopener nonreferrer"
+                    aria-label="Anza Cloud company website"
+               className="underline underline-offset-8  hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">
                 Anza Cloud
-              </span>
+              </Link>
               <span className="underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">
                 Arity Technologies
               </span>
-              <span className="underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">
+              <Link
+                 href={"https://www.intsoftkenya.co.ke/"}
+                 role="link"
+                 target="_blank"
+                 rel="noopener nonreferrer"
+                 aria-label="IntSoft Ltd company website"
+               className="underline underline-offset-8 hover:decoration-2 cursor-pointer decoration-[#73C606] font-normal">
                 IntSoft (K) Ltd
-              </span>
-            </motion.p>
+              </Link>
+            </motion.div>
           </motion.div>
-
           <div className="flex my-5 items-center gap-3">
             <Link
               href={"/contact"}
@@ -105,7 +133,7 @@ const Hero = () => {
             >
               <motion.button
                 variants={bodyAnimation}
-                className={`px-3 text-xs md:px-8 py-3 md:py-4 bg-dark rounded-full ${theme === "dark" ? "border border-[#f8f9fa]" : "border-none"} text-center md:text-sm
+                className={`px-3 text-xs md:px-6 md:py-3 lg:px-8 lg:py-4 py-3 bg-dark rounded-full ${theme === "dark" ? "border border-[#f8f9fa]" : "border-none"} text-center md:text-sm
                         font-medium uppercase tracking-wider text-dark no-underline transition-all duration-200
                         ease-out md:font-semibold flex items-center gap-1 hover:gap-3`}
               >
@@ -123,7 +151,7 @@ const Hero = () => {
             >
               <motion.button
                 variants={bodyAnimation}
-                className={`flex items-center gap-1 hover:gap-3 bg-light ${theme === "dark" ? "border-none" : "border border-[#0F1F2F]"} rounded-full md:px-8 p-3 md:py-4 uppercase md:text-sm text-xs font-medium tracking-wider no-underline transition-all duration-200 ease-out
+                className={`flex items-center gap-1 hover:gap-3 bg-light ${theme === "dark" ? "border-none" : "border border-[#0F1F2F]"} rounded-full md:px-6 md:py-3 lg:px-8 lg:py-4 p-3 uppercase md:text-sm text-xs font-medium tracking-wider no-underline transition-all duration-200 ease-out
                        text-center text-black`}
               >
                 <span>Get Resume</span>
@@ -138,25 +166,25 @@ const Hero = () => {
           >
             <Link
               href="/about"
-              className="underline underline-offset-8 decoration-2  hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal"
+              className="text-sm underline underline-offset-8 decoration-2  hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal"
             >
               About
             </Link>
             <Link
               href="/blogs"
-              className="underline underline-offset-8 decoration-2  hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal"
+              className="text-sm underline underline-offset-8 decoration-2  hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal"
             >
               Blogs
             </Link>
             <Link
               href="/projects"
-              className="underline underline-offset-8 decoration-2  hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal"
+              className="text-sm underline underline-offset-8 decoration-2  hover:decoration-4 cursor-pointer decoration-[#73C606] font-normal"
             >
               Projects
             </Link>
           </motion.div>
         </motion.article>
-        <article className="w-full md:w-2/6"></article>
+        <article className="hidden md:block md:w-1/6 xl:w-2/6"></article>
       </section>
     </motion.section>
   );
