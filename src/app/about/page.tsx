@@ -44,21 +44,21 @@ const page = () => {
           />
 
           <AnimatedBody
-            className="text-sm leading-8"
+            className="text-sm md:text-base leading-8"
             text={`I help transform visions and ideas into meaningful and useful software products that make a real impact.`}
           />
           <AnimatedBody
-            className="text-sm leading-8"
+            className="text-sm md:text-base leading-8"
             text={`Currently, I'm helping to build and shape meaningful human-centric innovations at Smart Applications International, simplifying access to healthcare and empowering people to make informed decisions about their wellbeing.`}
           />
           <AnimatedBody
-            className="text-sm leading-8"
+            className="text-sm md:text-base leading-8"
             text={
               "Proficient in JavaScript, TypeScript, React, Next.js, Redux, Tailwind CSS, Node.js and more. I bring strong problem-solving skills, a keen eye for user experience, collaboration, and project management capabilities."
             }
           />
           <AnimatedBody
-            className="text-sm leading-8"
+            className="text-sm md:text-base leading-8"
             text={
               "Before web development, I worked as a manager and cashier at a retail shop selling movies and electronics. This experience honed my customer experience, communication, and adaptability skills, which I now integrate into my development work to build intuitive and user-centric applications."
             }
